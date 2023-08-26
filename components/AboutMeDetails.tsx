@@ -58,7 +58,7 @@ const Stack = styled.p`
   font-weight: 600;
   animation: ${slideInFromLeft} 1.45s;
   position: absolute;
-  top: 302px;
+  top: 295px;
   text-shadow: 0px 5px 55px ${theme.colors.primary.green.mint};
 `
 
@@ -68,6 +68,7 @@ const Description = styled.p`
   text-align: center;
   position: absolute;
   top: 162px;
+  max-width: 90%;
   animation: ${slideInFromLeft} 1.25s;
   text-shadow: 0px 2px 77px ${theme.colors.primary.green.mint};
   `

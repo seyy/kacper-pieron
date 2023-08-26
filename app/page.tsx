@@ -5,8 +5,17 @@ import styled from 'styled-components'
 import AboutMe from "../pages/AboutMe"
 import Work from "../pages/Work"
 import Contact from "../pages/Contact"
+import { useEffect, useState } from "react"
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 900)
+  }, [])
+
   return (
     <>
     <NavContainer>

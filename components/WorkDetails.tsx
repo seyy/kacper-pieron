@@ -149,7 +149,6 @@ const Company2 = styled.p`
   animation: ${slideInFromLeft} 2.15s;
 `
 
-
 const ResponsibilitiesContainer2 = styled.div`
   display: flex;
   flex-direction: column;
