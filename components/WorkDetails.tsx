@@ -7,6 +7,7 @@ import TypescriptIcon from '../public/assets/TypescriptIcon';
 import { SiStyledcomponents } from 'react-icons/si'
 import GitIcon from '../public/assets/GitIcon';
 import GithubIcon from '../public/assets/GithubIcon';
+import { device } from '../styles/device';
 
 const slideInFromLeft = keyframes`
   0% {
@@ -22,7 +23,7 @@ const slideInFromLeft = keyframes`
 const WorkDetails = () => {
   return (
     <WorkContainer>
-      <Text>WORK EXPERIENCE</Text>
+      <TextWorkExperience>WORK EXPERIENCE</TextWorkExperience>
         <PositionTitle>Junior Frontend Developer</PositionTitle>
             <Company>Develoart</Company>
             <EmploymentDate>01.07.2023 - present</EmploymentDate>
@@ -37,7 +38,7 @@ const WorkDetails = () => {
             <ReactIcon />
             <NextjsIcon />
             <TypescriptIcon />
-            <SiStyledcomponents color={theme.colors.primary.beige} size='30'/>
+            <StyledSiStyledcomponents />
             <GitIcon />
             <GithubIcon />
         </IconsContainer>
@@ -60,8 +61,129 @@ const WorkContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px 0;
+  padding: 50px 0px;
+  margin-top: -1px;
+  margin-bottom: -2px;
 `;
+
+const TextWorkExperience = styled.p`
+  color: ${theme.colors.primary.green.mint};
+  font-size: 15px;
+  font-family: monospace;
+  font-weight: 600;
+  animation: ${slideInFromLeft} 1.75s;
+  text-shadow: 0px 2px 75px ${theme.colors.primary.green.mint};
+
+  @media ${device.laptop} {
+    font-size: 25px;
+  }
+  @media ${device.laptopL} {
+    font-size: 28.5px;
+  }
+  @media ${device.desktop} {
+    font-size: 35px;
+  }
+  @media ${device.mobileL} {
+    font-size: 15px;
+  }
+  @media ${device.mobileM} {
+    font-size: 15px;
+  }
+  @media ${device.mobileS} {
+    font-size: 15px;
+  }
+  @media ${device.tablet} {
+    font-size: 18px;
+  }
+`
+
+const PositionTitle = styled.h1`
+  color: ${theme.colors.primary.beige};
+  font-size: 13px;
+  font-family: monospace;
+  margin-top: 30px;
+  animation: ${slideInFromLeft} 1.85s;
+  font-weight: 600;
+
+  @media ${device.laptop} {
+    font-size: 21px;
+  }
+  @media ${device.laptopL} {
+    font-size: 24px;
+  }
+  @media ${device.desktop} {
+    font-size: 29px;
+  }
+  @media ${device.mobileS} {
+    font-size: 13px;
+  }
+  @media ${device.mobileM} {
+    font-size: 13px;
+  }
+  @media ${device.mobileL} {
+    font-size: 13px;
+  }
+  @media ${device.tablet} {
+    font-size: 16px;
+  }
+`
+
+const Company = styled.p`
+  color: #c7dddc;
+  font-size: 9px;
+  margin-top: 5px;
+  animation: ${slideInFromLeft} 1.9s;
+
+  @media ${device.laptop} {
+    font-size: 16px;
+  }
+  @media ${device.laptopL} {
+    font-size: 18.5px;
+  }
+  @media ${device.desktop} {
+    font-size: 24px;
+  }
+  @media ${device.mobileS} {
+    font-size: 9px;
+  }
+  @media ${device.mobileM} {
+    font-size: 9px;
+  }
+  @media ${device.mobileL} {
+    font-size: 9px;
+  }
+  @media ${device.tablet} {
+    font-size: 12px;
+  }
+`
+
+const EmploymentDate = styled.p`
+  color: #c7dddc;
+  font-size: 8px;
+  animation: ${slideInFromLeft} 1.95s;
+
+  @media ${device.laptop} {
+    font-size: 13px;
+  }
+  @media ${device.laptopL} {
+    font-size: 15px;
+  }
+  @media ${device.desktop} {
+    font-size: 18px;
+  }
+  @media ${device.mobileS} {
+    font-size: 8px;
+  }
+  @media ${device.mobileM} {
+    font-size: 8px;
+  }
+  @media ${device.mobileL} {
+    font-size: 8px;
+  }
+  @media ${device.tablet} {
+    font-size: 11px;
+  }
+`
 
 const ResponsibilitiesContainer = styled.div`
   display: flex;
@@ -70,14 +192,35 @@ const ResponsibilitiesContainer = styled.div`
   align-items: center;
 `
 
-const Text = styled.p`
-  color: ${theme.colors.primary.green.mint};
-  font-size: 15px;
+const Responsibilities = styled.h1`
+  font-size: 10px; 
+  color: ${theme.colors.primary.beige};
   font-family: monospace;
-  font-weight: 600;
-  animation: ${slideInFromLeft} 1.75s;
-  text-shadow: 0px 2px 75px ${theme.colors.primary.green.mint};
-`;
+  animation: ${slideInFromLeft} 2s;
+
+  @media ${device.laptop} {
+    font-size: 18px;
+  }
+  @media ${device.laptopL} {
+    font-size: 21px;
+  }
+  @media ${device.desktop} {
+    font-size: 23px;
+  }
+  @media ${device.mobileS} {
+    font-size: 10px;
+  }
+  @media ${device.mobileM} {
+    font-size: 10px;
+  }
+  @media ${device.mobileL} {
+    font-size: 10px;
+  }
+  @media ${device.tablet} {
+    font-size: 13.5px;
+  }
+`
+
 const Stack = styled.p`
   color: ${theme.colors.primary.green.mint};
   font-size: 10px;
@@ -86,6 +229,28 @@ const Stack = styled.p`
   margin-top: 10px;
   animation: ${slideInFromLeft} 1.8s;
   text-shadow: 0px 5px 55px ${theme.colors.primary.green.mint};
+
+  @media ${device.laptop} {
+    font-size: 18px;
+  }
+  @media ${device.laptopL} {
+    font-size: 21px;
+  }
+  @media ${device.desktop} {
+    font-size: 25px;
+  }
+  @media ${device.mobileS} {
+    font-size: 10px;
+  }
+  @media ${device.mobileM} {
+    font-size: 10px;
+  }
+  @media ${device.mobileL} {
+    font-size: 10px;
+  }
+  @media ${device.tablet} {
+    font-size: 13.5px;
+  }
 `
 
 const IconsContainer = styled.div`
@@ -97,35 +262,72 @@ const IconsContainer = styled.div`
   margin-top: 30px;
   justify-items: center;
   align-content: center;
+  svg {
+    width: 30px;
+  }
+
+  @media ${device.laptop} {
+    svg {
+      width: 55px;
+    }
+  }
+  @media ${device.laptopL} {
+    svg {
+      width: 60px;
+    }
+  }
+  @media ${device.desktop} {
+    svg {
+      width: 70px;
+    }
+  }
+  @media ${device.mobileS} {
+    svg {
+      width: 30px;
+    }
+  }
+  @media ${device.mobileM} {
+    svg {
+      width: 30px;
+    }
+  }
+  @media ${device.mobileL} {
+    svg {
+      width: 30px;
+    }
+  }
+  @media ${device.tablet} {
+    svg {
+      width: 35px;
+    }
+  }
 `
 
-const PositionTitle = styled.h1`
-  color: ${theme.colors.primary.beige};
-  font-size: 13px;
-  font-family: monospace;
-  margin-top: 30px;
-  animation: ${slideInFromLeft} 1.85s;
-  font-weight: 600;
-`;
+const StyledSiStyledcomponents = styled(SiStyledcomponents)`
+height: 30px;
+color: aliceblue;
 
-const Company = styled.p`
-  color: #c7dddc;
-  font-size: 9px;
-  margin-top: 5px;
-  animation: ${slideInFromLeft} 1.9s;
-`
-
-const EmploymentDate = styled.p`
-  color: #c7dddc;
-  font-size: 8px;
-  animation: ${slideInFromLeft} 1.95s;
-`
-
-const Responsibilities = styled.h1`
-  font-size: 10px; 
-  color: ${theme.colors.primary.beige};
-  font-family: monospace;
-  animation: ${slideInFromLeft} 2s;
+@media ${device.laptop} {
+  height: 55px;
+}
+@media ${device.laptopL} {
+  height: 60px;
+}
+@media ${device.desktop} {
+  height: 70px;
+}
+@media ${device.mobileL} {
+  height: 30px;
+}
+@media ${device.mobileM} {
+  height: 30px;
+}
+@media ${device.mobileS} {
+  height: 30px;
+}
+@media ${device.tablet} {
+  height: 35px;
+}
 `
 
 const PositionTitle2 = styled.h1`
@@ -135,18 +337,85 @@ const PositionTitle2 = styled.h1`
   margin-top: 30px;
   animation: ${slideInFromLeft} 2.05s;
   font-weight: 600;
-`;
+
+  @media ${device.laptop} {
+    font-size: 21px;
+  }
+  @media ${device.laptopL} {
+    font-size: 23px;
+  }
+  @media ${device.desktop} {
+    font-size: 29px;
+  }
+  @media ${device.mobileS} {
+    font-size: 13px;
+  }
+  @media ${device.mobileM} {
+    font-size: 13px;
+  }
+  @media ${device.mobileL} {
+    font-size: 13px;
+  }
+  @media ${device.tablet} {
+    font-size: 16px;
+  }
+`
 
 const Company2 = styled.p`
   color: #c7dddc;
   font-size: 9px;
   margin-top: 5px;
   animation: ${slideInFromLeft} 2.1s;
+
+  @media ${device.laptop} {
+    font-size: 16px;
+  }
+  @media ${device.laptopL} {
+    font-size: 18.5px;
+  }
+  @media ${device.desktop} {
+    font-size: 24px;
+  }
+  @media ${device.mobileS} {
+    font-size: 9px;
+  }
+  @media ${device.mobileM} {
+    font-size: 9px;
+  }
+  @media ${device.mobileL} {
+    font-size: 9px;
+  }
+  @media ${device.tablet} {
+    font-size: 12px;
+  }
 `
+
   const EmploymentDate2 = styled.p`
   color: #c7dddc;
   font-size: 8px;
   animation: ${slideInFromLeft} 2.15s;
+
+  @media ${device.laptop} {
+    font-size: 13px;
+  }
+  @media ${device.laptopL} {
+    font-size: 15px;
+  }
+  @media ${device.desktop} {
+    font-size: 18px;
+  }
+  @media ${device.mobileS} {
+    font-size: 8px;
+  }
+  @media ${device.mobileM} {
+    font-size: 8px;
+  }
+  @media ${device.mobileL} {
+    font-size: 8px;
+  }
+  @media ${device.tablet} {
+    font-size: 11px;
+  }
 `
 
 const ResponsibilitiesContainer2 = styled.div`
@@ -161,6 +430,28 @@ const Responsibilities2 = styled.h1`
   color: ${theme.colors.primary.beige};
   font-family: monospace;
   animation: ${slideInFromLeft} 2.2s;
+  
+  @media ${device.laptop} {
+    font-size: 18px;
+  }
+  @media ${device.laptopL} {
+    font-size: 21px;
+  }
+  @media ${device.desktop} {
+    font-size: 23px;
+  }
+  @media ${device.mobileS} {
+    font-size: 10px;
+  }
+  @media ${device.mobileM} {
+    font-size: 10px;
+  }
+  @media ${device.mobileL} {
+    font-size: 10px;
+  }
+  @media ${device.tablet} {
+    font-size: 13.5px;
+  }
 `
 
 export default WorkDetails;

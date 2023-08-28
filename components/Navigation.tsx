@@ -29,9 +29,9 @@ export const Navigation = () => {
     <>
       <DesktopMenu>
         <ButtonGroup>
-          <a href="#about">HOME</a>
-          <a href="#work">WORK</a>
-          <a href="#contact">CONTACT ME</a>
+          <ButtonNav href='#about'>HOME</ButtonNav>
+          <ButtonNav href='#work'>WORK</ButtonNav>
+          <ButtonNav href='#contact'>CONTACT ME</ButtonNav>
         </ButtonGroup>
       </DesktopMenu>
       <MobileMenuToggle onClick={toggleMobileMenu}>
@@ -55,22 +55,29 @@ const DesktopMenu = styled.div`
   z-index: 1;
   display: flex;
   width: 100%;
+  justify-content: center;
+  align-items: center;
   height: 64px;
-  box-shadow: 0px 1px 6px;
-  background-color: ${theme.colors.primary.white};
+  color: aliceblue;
+  background-color: ${theme.colors.primary.black};
   @media ${device.tablet} {
     display: none;
   }
-`;
+`
+
+const ButtonNav = styled.a`
+  color: aliceblue;
+  &:hover {
+    color: ${theme.colors.primary.green.mint};
+    transition: 0.15s;
+  }
+`
 
 const ButtonGroup = styled.div`
   display: flex;
-  align-items: center;
-  line-height: 16px;
-  white-space: nowrap;
-  &:hover {
-    color: ${theme.colors.primary.green.mint};
-  }
+  gap: 64px;
+  font-size: 22px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 `;
 
 const MobileMenuToggle = styled.div`
@@ -94,9 +101,8 @@ const MobileMenuToggle = styled.div`
 
 const MobileMenu = styled.div`
   background-color: ${theme.colors.primary.white};
-  position: relative;
+  position: fixed;
   top: 0;
-  right: 0;
   width: 100%;
 `;
 
