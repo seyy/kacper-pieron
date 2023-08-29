@@ -5,6 +5,10 @@ import { device } from '../styles/device';
 import GithubLink from '../components/LinksIconsReadyToUse/GithubLink';
 import LinkedinLink from '../components/LinksIconsReadyToUse/LinkedinLink';
 
+interface FormValues {
+  [key: string]: string;
+}
+
 const slideInFromLeft  = keyframes`
   0% {
     transform: translateX(-100vw);
@@ -24,7 +28,7 @@ const Contact = () => {
     message: '',
   })
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
     setFormData((prevData) => ({
       ...prevData,
