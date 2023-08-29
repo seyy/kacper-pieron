@@ -9,6 +9,11 @@ type MobileLinkProps = {
   onClick: () => void
 };
 
+interface MobileMenuItemProps {
+  href: string;
+  children: React.ReactNode;
+}
+
 export const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -19,11 +24,12 @@ export const Navigation = () => {
     setMobileMenuOpen(false);
   };
 
-  const MobileMenuItem = ({ href, children }) => (
-    <MobileLink href={href} onClick={closeMobileMenu}>
-      {children}
-    </MobileLink>
-  )
+const MobileMenuItem: React.FC<MobileMenuItemProps> = ({ href, children }) => (
+  <MobileLink href={href} onClick={closeMobileMenu}>
+    {children}
+  </MobileLink>
+);
+
 
   return (
     <>
