@@ -1,4 +1,4 @@
-import React, { useState, FormEvent } from 'react';
+import React, { useState, FormEvent, ChangeEvent } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { theme } from '../styles/theme';
 import { device } from '../styles/device';
@@ -28,7 +28,7 @@ const Contact = () => {
     message: '',
   })
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
     setFormData((prevData) => ({
       ...prevData,
