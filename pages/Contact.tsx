@@ -28,8 +28,16 @@ const Contact = () => {
     message: '',
   })
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }))
+  }
+
+  const handleTextAreaChange =(e: ChangeEvent<HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
@@ -71,7 +79,7 @@ const Contact = () => {
           name="message"
           placeholder="Your Message"
           value={formData.message}
-          onChange={handleChange}
+          onChange={handleTextAreaChange}
           required
         />
         <SubmitButton type="submit">Send message</SubmitButton>
