@@ -57,7 +57,7 @@ const Contact = () => {
   return (
     <ContactSection>
       <ContactMeText>SEND ME A TEXT</ContactMeText>
-      <Form onSubmit={handleSubmit} action="https://formsubmit.co/kpieron@poczta.fm" method="POST">
+      <Form onSubmit={handleSubmit} action="https://formsubmit.co/hdu7dd@gmail.com" method="POST">
         <Input
           type="text"
           name="name"
