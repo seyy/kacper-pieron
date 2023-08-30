@@ -1,4 +1,4 @@
-import React from 'react';
+\import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import ReactIcon from '../public/assets/ReactIcon'
 import TailwindIcon from '../public/assets/TailwindIcon';
@@ -94,7 +94,7 @@ const NameWrapper = styled.div`
 `
 
 const Name = styled.h1`
-  color: #929291;
+  color: #ffffffe1;
   font-family: 'Verdana', Geneva, Tahoma, sans-serif;
   animation: ${slideInFromLeft} 1.1s;
   text-shadow: -2px -2px 235px ${theme.colors.primary.green.mint};
@@ -141,12 +141,12 @@ const Description = styled.p`
   }
   @media ${device.laptopL} {
     font-size: 26.5px;
-    max-width: 70%;
+    max-width: 80%;
     margin-top: 20px;
   }
   @media ${device.desktop} {
-    font-size: 35px;
-    max-width: 60%;
+    font-size: 25px;
+    max-width: 50%;
     margin-top: -101px;
   }
   @media ${device.mobileS} {
