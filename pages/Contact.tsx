@@ -75,6 +75,7 @@ const Contact = () => {
           required
         />
         <TextArea
+          type="text"
           name="message"
           placeholder="Your Message"
           value={formData.message}
