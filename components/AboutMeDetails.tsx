@@ -1,4 +1,4 @@
-\import React from 'react';
+import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import ReactIcon from '../public/assets/ReactIcon'
 import TailwindIcon from '../public/assets/TailwindIcon';
