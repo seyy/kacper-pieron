@@ -46,8 +46,7 @@ const Contact = () => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    console.log(formData)
-
+    
     setFormData({
       name: '',
       email: '',
